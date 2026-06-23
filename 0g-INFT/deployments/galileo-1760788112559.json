@@ -1,0 +1,38 @@
+{
+  "network": {
+    "name": "galileo",
+    "chainId": "16602",
+    "rpcUrl": "https://evmrpc-testnet.0g.ai",
+    "explorer": "https://chainscan-galileo.0g.ai"
+  },
+  "timestamp": "2025-10-18T11:48:32.558Z",
+  "deployer": "0x32F91E4E2c60A9C16cAE736D3b42152B331c147F",
+  "contracts": {
+    "oracle": {
+      "address": "0x78aCb19366A0042dA3263747bda14BA43d68B0de",
+      "name": "OracleStub",
+      "txHash": "0xa1ff0905c4dbf54ecc9abcbf56646cc5697e6b7bbed606a1519d386fc335ea93"
+    },
+    "dataVerifier": {
+      "address": "0xd84254b80e4C41A88aF309793F180a206421b450",
+      "name": "DataVerifierAdapterFixed",
+      "txHash": "0x3c82ecf7abc5344281ac90c3489ea19c453eaae821af7dbe4fc9ffe3ed52ba05",
+      "oracleAddress": "0x78aCb19366A0042dA3263747bda14BA43d68B0de"
+    },
+    "inft": {
+      "address": "0x9C3FFe10e61B1750F61D2E0A64c6bBE8984BA268",
+      "name": "INFTFixed",
+      "txHash": "0x0f55dfb623b5ba6d6c554f39f5aad96944d132543d3e9268fdec9534fd878c99",
+      "dataVerifierAddress": "0xd84254b80e4C41A88aF309793F180a206421b450",
+      "tokenName": "0G Intelligent NFTs",
+      "tokenSymbol": "0G-INFT"
+    }
+  },
+  "features": [
+    "ERC-7857 Intelligent NFT Standard",
+    "Improved error handling with custom errors",
+    "Optimized gas usage",
+    "Proper error bubbling in DataVerifier",
+    "0G Storage integration ready"
+  ]
+}
