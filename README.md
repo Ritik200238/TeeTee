@@ -19,6 +19,20 @@
 
 ---
 
+<div align="center">
+
+# 📘 Project Scoping & 0G Integration Plan
+
+### 👉 [**READ THE FULL PROJECT PLAN HERE**](https://docs.google.com/document/d/18E-QrSiMPZoc5sdPSylSrSv9hwXRkj0I95vZz4BgJm4/edit?usp=sharing) 👈
+
+[![Read the Full Plan](https://img.shields.io/badge/📘_Project_Scoping_%26_0G_Integration_Plan-Click_to_Read-4285F4?style=for-the-badge&logo=googledocs&logoColor=white)](https://docs.google.com/document/d/18E-QrSiMPZoc5sdPSylSrSv9hwXRkj0I95vZz4BgJm4/edit?usp=sharing)
+
+**The complete project definition, architecture, target 0G components, and full integration roadmap — start here.**
+
+</div>
+
+---
+
 ## 📦 What's in This Repository
 
 This repository holds the **`0g-INFT` module** of TeeTee — the production implementation of the **ERC-7857 Intelligent NFT (iNFT)** standard on the 0G Network, including the Solidity contracts, deployment artifacts, oracle/metadata tooling, and a demo frontend (see [`0g-INFT/`](./0g-INFT)).
