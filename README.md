@@ -1,10 +1,6 @@
 # TeeTee - Decentralized AI Inference with TEE & 0G Network
 
 <div align="center">
-  <img src="images/teetee_banner.jpg" alt="TeeTee Banner" width="100%" style="border-radius: 12px; margin-bottom: 20px;" />
-</div>
-
-<div align="center">
 
 [![Live App](https://img.shields.io/badge/Live_App-teetee.site-blue)](https://teetee.site)
 [![0G Network](https://img.shields.io/badge/Built_on-0G_Network-purple)](https://0g.ai)
@@ -23,8 +19,17 @@
 
 ---
 
+## 📦 What's in This Repository
+
+This repository holds the **`0g-INFT` module** of TeeTee — the production implementation of the **ERC-7857 Intelligent NFT (iNFT)** standard on the 0G Network, including the Solidity contracts, deployment artifacts, oracle/metadata tooling, and a demo frontend (see [`0g-INFT/`](./0g-INFT)).
+
+The sections below document the **full TeeTee platform** end-to-end. Components such as `frontend/`, `backend/`, `smartcontract/`, `llm/`, and `ModelSplitting-v1/` belong to that wider system and are described here for context — this repository centers on the iNFT layer.
+
+---
+
 ## 📋 Table of Contents
 
+- [What's in This Repository](#-whats-in-this-repository)
 - [Overview](#-overview)
 - [Verified Mainnet Contracts](#-verified-mainnet-contracts-0g-network)
 - [Unique Selling Point (USP)](#-unique-selling-point-usp)
@@ -476,8 +481,6 @@ TeeTee's architecture consists of three interconnected flows:
 
 #### Complete Architecture Overview
 
-![TeeTee Architecture](./images/TeeTeeArchitecture.png)
-
 **The complete system architecture showing all components and their interactions:**
 - **INFT Management**: Minting, authorization, and ownership on 0G Chain
 - **Smart Contract Layer**: Credit management and on-chain settlements
@@ -505,8 +508,6 @@ This ensures deterministic, verifiable model deployment across the network.
 ---
 
 #### 🔴 Host Flow: Onboarding & Deployment
-
-![User and Host Flow](./images/TeeTeeUserAndHostFlow.png)
 
 **1. Host Onboarding with iNFT Minting**
 - Host mints or receives an iNFT pointing to shard's encrypted metadata
@@ -547,8 +548,6 @@ This ensures deterministic, verifiable model deployment across the network.
 - All transactions verifiable on-chain
 
 **2. Query Relay & Inference**
-
-![Response Passing Between TEE Shards](./images/TeeTeeResponsePassing.png)
 
 **Layer-Sharded Inference Flow:**
 ```
@@ -654,8 +653,8 @@ User Query → TEE 1 (Layers 1-11) → TEE 2 (Layers 12-22) → ... → TEE N �
 > **EVM Wallet & Cancun Compiler Configurations (Latest 0G Docs)**
 > - **Pre-Generated Deployment Wallet**:
 >   - EVM Address: `0x54149D6c25593Ef07631F330239a61A1b06629db`
->   - Private Key: configured in `.env` inside [smartcontract/.env](file:///C:/Users/prate/0r/smartcontract/.env) and [0g-INFT/.env](file:///C:/Users/prate/0r/0g-INFT/.env)
-> - **Solidity EVM Cancun Compiler**: Compiler target is set to **`cancun`** (updated in [smartcontract/hardhat.config.js](file:///C:/Users/prate/0r/smartcontract/hardhat.config.js) and [0g-INFT/hardhat.config.ts](file:///C:/Users/prate/0r/0g-INFT/hardhat.config.ts)).
+>   - Private Key: set it in your local `.env` file (e.g. [`0g-INFT/.env`](./0g-INFT)). The `.env` file is git-ignored and must never be committed.
+> - **Solidity EVM Cancun Compiler**: Compiler target is set to **`cancun`** (configured in [`0g-INFT/hardhat.config.ts`](./0g-INFT/hardhat.config.ts)).
 > - **0G Galileo Testnet Chain ID**: `16602` (RPC: `https://evmrpc-testnet.0g.ai`)
 > - **0G Mainnet Chain ID**: `16661` (RPC: `https://evmrpc.0g.ai`)
 
@@ -924,6 +923,8 @@ TeeTee-v2/
 │
 └── README.md                  # This file
 ```
+
+> 📍 **This repository contains the `0g-INFT/` module shown above.** The other directories are part of the broader TeeTee platform and are documented here for context.
 
 ---
 
@@ -1266,7 +1267,7 @@ We welcome contributions from the community! TeeTee is an open-source project, a
 - **📖 Documentation**: [Comprehensive Guide](https://docs.google.com/document/d/1pqDrJoYoBfVG19Kxu0-9uSHfwEq3ZQjp8d1CU9Pd-Kk/edit?usp=sharing)
 - **🎥 Demo Video**: [TeeTee Wave 5 Demo](https://drive.google.com/drive/folders/1eWDgBJ_o2jr5xT2U_ZYclxhAAt15G4HJ?usp=sharing)
 - **🐦 Twitter Threads**: [Thread 1](https://x.com/ilovedahmo/status/1986064335354126573) | [Thread 2](https://x.com/derek2403/status/1986100026100322593) | [Thread 3](https://x.com/marcustan1337/status/1986066934362943503) | [Thread 4](https://x.com/avoisavo/status/1986130154222199032)
-- **🔍 GitHub**: [Report bugs or request features](https://github.com/your-org/TeeTee-v2/issues)
+- **🔍 GitHub**: [Report bugs or request features](https://github.com/Ritik200238/TeeTee/issues)
 
 ### 📜 Verified Mainnet Contracts (0G Network)
 
